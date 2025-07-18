@@ -1,0 +1,10 @@
+.canvas[data-v-ff7a7df1] {
+    height: 100%;
+    width: 100%
+}
+
+@media (max-width:767px) {
+    .canvas[data-v-ff7a7df1] {
+        pointer-events: auto
+    }
+}

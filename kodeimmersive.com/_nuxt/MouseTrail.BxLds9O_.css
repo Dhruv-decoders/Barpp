@@ -1,0 +1,12 @@
+.v-enter-active[data-v-24d93c86],
+.v-leave-active[data-v-24d93c86] {
+    transition-duration: .5s;
+    transition-property: opacity;
+    transition-timing-function: cubic-bezier(.4, 0, .2, 1);
+    transition-timing-function: cubic-bezier(0, 0, .2, 1)
+}
+
+.v-enter-from[data-v-24d93c86],
+.v-leave-to[data-v-24d93c86] {
+    opacity: 0
+}

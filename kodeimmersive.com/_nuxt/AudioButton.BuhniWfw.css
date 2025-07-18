@@ -1,0 +1,49 @@
+.component-audio-button[data-v-8cca7120] {
+    -moz-column-gap: .2em;
+    column-gap: .2em;
+    display: inline-grid;
+    text-transform: uppercase;
+    transition-timing-function: cubic-bezier(0, 0, .2, 1)
+}
+
+@media (hover:hover) and (pointer:fine) {
+    .component-audio-button:hover .bracket-left[data-v-8cca7120] {
+        --tw-translate-x: -50%
+    }
+    .component-audio-button:hover .bracket-left[data-v-8cca7120],
+    .component-audio-button:hover .bracket-right[data-v-8cca7120] {
+        transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skew(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))
+    }
+    .component-audio-button:hover .bracket-right[data-v-8cca7120] {
+        --tw-translate-x: 50%
+    }
+    .component-audio-button:hover[data-theme=white] .bracket[data-v-8cca7120] {
+        --tw-text-opacity: 1;
+        color: rgb(0 0 0/var(--tw-text-opacity, 1))
+    }
+    .component-audio-button:hover[data-theme=black] .label[data-v-8cca7120] {
+        --tw-text-opacity: 1;
+        color: rgb(255 76 0/var(--tw-text-opacity, 1))
+    }
+}
+
+.label[data-v-8cca7120] {
+    display: inline-grid;
+    grid-column-start: 2;
+    transition-duration: .5s;
+    transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+    transition-timing-function: cubic-bezier(.4, 0, .2, 1)
+}
+
+.bracket[data-v-8cca7120],
+.label[data-v-8cca7120] {
+    grid-row-start: 1;
+    pointer-events: none
+}
+
+.bracket[data-v-8cca7120] {
+    position: relative;
+    transition-duration: .3s, .5s;
+    transition-property: transform, color;
+    transition-timing-function: cubic-bezier(0, 0, .2, 1), cubic-bezier(0, 0, .2, 1)
+}
