@@ -1,7 +1,11 @@
 import { onMounted } from 'vue'
 import gsap from 'gsap'
 import ScrambleTextPlugin from 'gsap/ScrambleTextPlugin'
-gsap.registerPlugin(ScrambleTextPlugin)
+onMounted(() => {
+  if (typeof gsap.registerPlugin === 'function') {
+    gsap.registerPlugin(ScrambleTextPlugin)
+  }
+})
 
 export function useGsapScramble(elRef, text, options = {}) {
   function scramble() {
