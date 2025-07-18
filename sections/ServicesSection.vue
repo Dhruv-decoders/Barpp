@@ -37,7 +37,11 @@ import { ref, onMounted, nextTick } from 'vue'
 import gsap from 'gsap'
 import SplitText from 'gsap/SplitText'
 import ScrollTrigger from 'gsap/ScrollTrigger'
-gsap.registerPlugin(SplitText, ScrollTrigger)
+onMounted(() => {
+  if (typeof gsap.registerPlugin === 'function') {
+    gsap.registerPlugin(SplitText, ScrollTrigger)
+  }
+})
 
 const servicesSection = ref(null)
 const headerRef = ref(null)

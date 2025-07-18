@@ -46,7 +46,11 @@
 import { ref, onMounted } from 'vue'
 import gsap from 'gsap'
 import ScrollTrigger from 'gsap/ScrollTrigger'
-gsap.registerPlugin(ScrollTrigger)
+onMounted(() => {
+  if (typeof gsap.registerPlugin === 'function') {
+    gsap.registerPlugin(ScrollTrigger)
+  }
+})
 import { useTypewriter } from '@/composables/useTypewriter.js'
 
 const desktopLines = ref(null)

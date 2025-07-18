@@ -16,7 +16,11 @@ import gsap from 'gsap'
 import SplitText from 'gsap/SplitText'
 import ScrambleTextPlugin from 'gsap/ScrambleTextPlugin'
 import ScrollTrigger from 'gsap/ScrollTrigger'
-gsap.registerPlugin(SplitText, ScrambleTextPlugin, ScrollTrigger)
+onMounted(() => {
+  if (typeof gsap.registerPlugin === 'function') {
+    gsap.registerPlugin(SplitText, ScrambleTextPlugin, ScrollTrigger)
+  }
+})
 
 const scrambleEl = ref(null)
 

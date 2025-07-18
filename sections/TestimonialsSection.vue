@@ -25,7 +25,11 @@
 import { ref, onMounted, nextTick } from 'vue'
 import gsap from 'gsap'
 import ScrollTrigger from 'gsap/ScrollTrigger'
-gsap.registerPlugin(ScrollTrigger)
+onMounted(() => {
+  if (typeof gsap.registerPlugin === 'function') {
+    gsap.registerPlugin(ScrollTrigger)
+  }
+})
 
 const testimonials = [
   {
